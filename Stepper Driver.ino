@@ -1,8 +1,9 @@
 // define the stepper driver pins
-#define IN1  8
-#define IN2  9
-#define IN3  10
-#define IN4  11
+//for use with particle photon, ULN2003 Moror driver Module, and RoHS STEP MOTOR 28BYJ-48 5V DC
+#define IN1  D0
+#define IN2  D1
+#define IN3  D2
+#define IN4  D3
 
 // define how many cycles to a full rotation
 #define CYCLES_PER_ROTATION 512
@@ -20,11 +21,11 @@ void setup()
 void loop() 
 {
   // make the stepper do 1.5 rotations CW
-  turns(1.5);
-  delay(1000);
+  turns(1);
+  delay(5000);
   // make the stepper do 1.5 rotations CCW
-  turns(-1.5);
-  delay(1000);
+  turns(-1);
+  delay(5000);
 
 }
 
